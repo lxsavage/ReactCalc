@@ -1,17 +1,26 @@
 {
   "name": "calc-app",
   "version": "0.1.0",
+  "author": "Logan Savage",
   "private": true,
+  "main": "src/electron-start.js",
+  "homepage": "./",
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "electron-is-dev": "^1.0.1",
+    "immutability-helper": "^3.0.0",
+    "mathjs": "^5.5.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "electron": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-pack": "yarn build;"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +30,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "build": {
+    "appId": "com.r2d2292.electron-reactcalc",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
+  }
 }
