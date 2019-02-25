@@ -1,12 +1,13 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const isDev = require('electron-is-dev')
+
 let win
 
 function buildWindow() {
   win = new BrowserWindow({
-    width: 256,
-    height: 350,
+    width: 232,
+    height: 330,
     useContentSize: true,
     resizable: false,
     show: false

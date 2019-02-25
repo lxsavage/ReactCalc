@@ -9,18 +9,20 @@
     "bootstrap": "^4.3.1",
     "electron-is-dev": "^1.0.1",
     "immutability-helper": "^3.0.0",
+    "jquery": "^3.3.1",
     "mathjs": "^5.5.0",
+    "popper.js": "^1.14.7",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
-    "electron": "^4.0.5"
+    "typescript": "^3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-pack": "yarn build;"
+    "electron-build": "yarn run build;electron-builder ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,13 +34,24 @@
     "not op_mini all"
   ],
   "build": {
+    "extends": null,
     "appId": "com.r2d2292.electron-reactcalc",
     "files": [
       "build/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "src/electron-start.js"
     ],
-    "directories":{
+    "directories": {
       "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "./assets/icon.icns",
+      "darkModeSupport": false
     }
+  },
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5"
   }
 }
