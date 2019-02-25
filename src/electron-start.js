@@ -10,6 +10,8 @@ function buildWindow() {
     height: 330,
     useContentSize: true,
     resizable: false,
+    fullscreenable: false,
+    maximizable: false,
     show: false
   })
   win.loadURL(
