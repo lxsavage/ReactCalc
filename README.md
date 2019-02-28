@@ -1,4 +1,4 @@
-# ReactCalc v0.1.0
+# ReactCalc v0.1.2
 
 This app is an example of using Electron and React.js to create a basic calculator.
 
