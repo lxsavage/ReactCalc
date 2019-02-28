@@ -12,6 +12,9 @@ This app is an example of using Electron and React.js to create a basic calculat
 
 ### Running
 
+#### Download
+Pre-compiled versions of the app are available (here)[https://github.com/r2d2292/ReactCalc/releases], on the releases page.
+
 #### Build
 (Currently only tested on MacOS Mojave 10.14.3):
 1. Run `yarn run electron-build`
