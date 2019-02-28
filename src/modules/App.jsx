@@ -5,14 +5,29 @@ import ButtonContainer from './buttonContainer'
 import ButtonRow from './buttonRow'
 import Display from './display'
 
+import Colors from '../colors.json'
+
+const {ipcRenderer} = window.require('electron')
+var darkMode = ipcRenderer.sendSync('IS_DARK_MODE')
+
 class App extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+
+    // Set the color scheme
+    this.colors = Colors.LightMode
+    if (darkMode) {
+      this.colors = Colors.DarkMode
+    }
+
+    document.body.style.backgroundColor = this.colors.bg
+
     this.state = {
       history: [[]],
       operations: []
     }
   }
+
   calculateOperations = () => {
     const newHistory = [...this.state.history, this.state.operations]
     let result = this.state.operations.join('')
@@ -75,7 +90,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Display state={this.state.operations} />
+        <Display state={this.state.operations} bg={this.colors.panelBg} text={this.colors.text} darkMode={darkMode} />
         <ButtonContainer>
           <ButtonRow>
             <Button onClick={this.handleClick} label="！" value="clearentries" />

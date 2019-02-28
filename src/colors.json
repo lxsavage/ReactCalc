@@ -1,0 +1,20 @@
+{
+  "DarkMode": {
+    "bg": "rgb(50,50,50)",
+    "numKeys": "btn-light",
+    "clearKeys": "btn-danger",
+    "backspaceKey": "btn-warning",
+    "operatorKeys": "btn-primary",
+    "text": "white",
+    "panelBg": "black"
+  },
+  "LightMode": {
+      "bg": "rgb(245,245,245)",
+      "numKeys": "btn-dark",
+      "clearKeys": "btn-danger",
+      "backspaceKey": "btn-warning",
+      "operatorKeys": "btn-primary",
+      "text": "black",
+      "panelBg": "rgb(245,245,245)"
+  }
+}

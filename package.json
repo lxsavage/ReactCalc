@@ -1,6 +1,6 @@
 {
   "name": "calc-app",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "Logan Savage",
   "private": true,
   "main": "src/electron-start.js",
@@ -47,7 +47,7 @@
     "mac": {
       "category": "public.app-category.utilities",
       "icon": "./assets/icon.icns",
-      "darkModeSupport": false
+      "darkModeSupport": true
     }
   },
   "devDependencies": {

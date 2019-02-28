@@ -5,8 +5,13 @@ class Display extends React.Component {
     let visual = this.props.state.join('')
     if (visual === '')
       visual = '0'
+
+    let className = `d-block${(this.props.darkMode) ? '' : ' border'}`
     return (
-      <div className="d-block border">
+      <div
+        className={className}
+        style={{ backgroundColor: this.props.bg, color: this.props.text }}
+      >
         <div className="p-3">
           {visual}
         </div>
