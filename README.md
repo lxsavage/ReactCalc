@@ -5,6 +5,7 @@ This app is an example of using Electron and React.js to create a basic calculat
 ### Features
 
 * Basic 4 operators/operations `+ - * /`
+* A backspace button `<`
 * History Function (Press `^` to go to previous calculation)
    * `C` To clear this entry
    * `!` To clear history
