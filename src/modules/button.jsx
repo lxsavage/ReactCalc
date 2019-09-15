@@ -1,7 +1,7 @@
 import React from 'react'
 import Color from '../colors.json'
 
-const {ipcRenderer} = window.require('electron')
+const { ipcRenderer } = window.require('electron')
 var darkMode = ipcRenderer.sendSync('IS_DARK_MODE')
 
 class Button extends React.Component {

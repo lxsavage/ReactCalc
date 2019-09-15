@@ -3,8 +3,10 @@ import React from 'react'
 class Display extends React.Component {
   render() {
     let visual = this.props.state.join('')
-    if (visual === '')
+
+    if (visual === '') {
       visual = '0'
+    }
 
     let className = `d-block${(this.props.darkMode) ? '' : ' border'}`
     return (

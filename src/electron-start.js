@@ -1,13 +1,12 @@
-const {app, BrowserWindow, systemPreferences, ipcMain, rendererWindow} = require('electron')
+const { app, BrowserWindow, systemPreferences, ipcMain } = require('electron')
 const path = require('path')
 const isDev = require('electron-is-dev')
 
-const hasDarkTheme = systemPreferences.isDarkMode()
 let win
 
 // Allow App / Button to see if the process is in dark mode
 ipcMain.on('IS_DARK_MODE', (event) => {
-  event.returnValue = hasDarkTheme
+  event.returnValue = systemPreferences.isDarkMode()
 })
 
 function buildWindow() {
@@ -19,7 +18,7 @@ function buildWindow() {
     //fullscreenable: false,
     maximizable: false,
     show: false,
-    darkTheme: hasDarkTheme
+    darkTheme: systemPreferences.isDarkMode()
   })
   win.loadURL(
     isDev

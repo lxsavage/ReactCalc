@@ -7,7 +7,7 @@ import Display from './display'
 
 import Colors from '../colors.json'
 
-const {ipcRenderer} = window.require('electron')
+const { ipcRenderer } = window.require('electron')
 var darkMode = ipcRenderer.sendSync('IS_DARK_MODE')
 
 class App extends React.Component {
